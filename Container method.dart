@@ -255,3 +255,134 @@ class KcetApp extends StatelessWidget {
   }
 }
 -----------------------------------------------------------------------------------------------------------------------------------------------------
+7. Decoration:          The decoration property is used to decorate the box(e.g. give a border). This paints behind the child.
+	                Whereas foreground Decoration paints in front of a child.
+	                Let us give a border to the container. But, both color and border color cannot be given.
+          Syntax==
+	decoration: BoxDecoration(
+            border: Border.all(color: Colors.black, width: 3),
+          ),
+
+	
+	Example:-
+		import 'dart:html';
+
+import 'package:flutter/material.dart';
+
+void main() {
+  runApp(KcetApp());
+}
+
+class KcetApp extends StatelessWidget {
+  const KcetApp({super.key});
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+        home: Scaffold(
+      appBar: AppBar(
+        title: Text('Kcet Councelling '),
+        centerTitle: true,
+        backgroundColor: Color(0xff187acb),
+      ),
+      body: Container(
+        height: 525,
+        width: double.infinity,
+        margin: EdgeInsets.all(0),
+        padding: EdgeInsets.all(0),
+        alignment: Alignment.topCenter,
+        decoration:
+            BoxDecoration(border: Border.all(color: Colors.grey, width: 5)),
+        child: Text(
+          'WELCOME TO COUNCELLING',
+          style: TextStyle(
+            fontWeight: FontWeight.bold,
+            fontSize: 25,
+            fontStyle: FontStyle.italic,
+            color: Colors.indigo,
+          ),
+        ),
+      ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {},
+        child: Text('Click'),
+        backgroundColor: Colors.amber,
+      ),
+    ));
+  }
+}
+--------------------------------------------------------------------------------------------------------------------------------------
+
+8. Transform:     This property of the container helps us to rotate the container.
+	          We can rotate the container in any axis, here we are rotating in the z-axis.
+
+	Syntax:-   transform: Matrix4.rotationZ(0.1),
+         Example;_
+
+		 import 'dart:html';
+
+import 'package:flutter/material.dart';
+
+void main() {
+  runApp(KcetApp());
+}
+
+class KcetApp extends StatelessWidget {
+  const KcetApp({super.key});
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+        home: Scaffold(
+      appBar: AppBar(
+        title: Text('Kcet Councelling '),
+        centerTitle: true,
+        backgroundColor: Color(0xff187acb),
+      ),
+      body: Container(
+        height: 525,
+        width: double.infinity,
+        margin: EdgeInsets.all(0),
+        padding: EdgeInsets.all(0),
+        alignment: Alignment.topCenter,
+        decoration:
+            BoxDecoration(border: Border.all(color: Colors.grey, width: 5)),
+        transform: Matrix4.rotationX(0.5), // Actions
+        child: Text(
+          'WELCOME TO COUNCELLING',
+          style: TextStyle(
+            fontWeight: FontWeight.bold,
+            fontSize: 25,
+            fontStyle: FontStyle.italic,
+            color: Colors.indigo,
+          ),
+        ),
+      ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {},
+        child: Text('Click'),
+        backgroundColor: Colors.amber,
+      ),
+    ));
+  }
+}
+----------------------------------------------------------------------------------------------------------------------------------
+
+9. Constraints:  When we want to give additional constraints to the child, we can use this property. 
+    NOTE:-{
+	Creates a widget that combines common painting, positioning, and sizing widgets.
+        The height and width values include the padding.
+        ===>    The color and decoration arguments cannot both be supplied, since it would potentially result in
+		the decoration drawing over the background color. To supply a decoration with a color, 
+		use decoration: BoxDecoration(color: color).
+	    }
+
+Syntax:- 
+	 constraints:BoxConstraints(
+        )
+=================================================================================================================================
+		 ===================================================================
+		 10. ClipBehaviour:  This property takes in Clip Enum as the object. This decides whether the content inside
+			 the container will be clipped or not.
+
+                 11. Foreground Decoration:  This parameter holds Decoration class as the object. It controls the decoration in
+	                 front of the Container widget.
+		 
