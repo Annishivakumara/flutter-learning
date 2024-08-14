@@ -7,3 +7,17 @@
  The Navigating AppDrawer is divided into three sections namely header, body, and footer.
  The idea is about having a navigator with a couple of items as the drawer’s child that will be navigated to different destinations on getting tapped.
 All children of a Drawer widget are usually in ListView and initially, only the DrawerHeader is present in the UI which when tapped extends horizontally.
+
+
+      Syntax:
+
+Drawer({Key key, double elevation: 16.0, Widget child, String semanticLabel}) 
+
+
+      Properties:
+* child: The widgets below this widget in the tree.
+* hashCode: The hash code for this object.
+* key: Controls how one widget replaces another widget in the tree.
+* runtimeType: A representation of the runtime type of the object.
+* elevation: The z-coordinate at which to place this drawer relative to its parent.
+* semanticLabel: The semantic label of the dialogue used by accessibility frameworks to announce screen transitions when the drawer is opened and closed.
