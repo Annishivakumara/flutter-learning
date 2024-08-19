@@ -59,3 +59,99 @@ Explanation: This line closes the ListView widget. It marks the end of the scrol
 10. )
 Explanation: This final line closes the Drawer widget. It indicates the completion of the drawer’s definition.
 
+
+
+
+
+     import 'package:flutter/material.dart';
+
+void main() {
+  runApp(KcetApp());
+}
+
+class KcetApp extends StatelessWidget {
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: Scaffold(
+        appBar: AppBar(
+          title: Text('Kcet Counselling'),
+          centerTitle: true,
+          backgroundColor: Colors.greenAccent,
+        ),
+        body: Container(
+          height: 660,
+          width: double.infinity,
+          padding: EdgeInsets.all(0),
+          margin: EdgeInsets.all(0),
+          alignment: Alignment.topCenter,
+          decoration: BoxDecoration(
+            border: Border.all(color: Colors.green, width: 4),
+          ),
+          child: const Text('WELCOME MY GUEST',
+              style: TextStyle(
+                fontSize: 20,
+                letterSpacing: 0,
+                fontWeight: FontWeight.bold,
+              )),
+        ),
+        floatingActionButton: FloatingActionButton(
+          onPressed: () {},
+          child: Text(' Click me'),
+          backgroundColor: Colors.green,
+        ),
+        drawer: Drawer(
+          child: ListView(
+            padding: EdgeInsets.all(0),
+            children: [
+              DrawerHeader(
+                decoration: BoxDecoration(
+                  color: Color(0xffdeefdf),
+                  border: Border(
+                    top: BorderSide(width: 0.5, color: Colors.greenAccent),
+                    left: BorderSide(width: 0.5, color: Colors.greenAccent),
+                    right: BorderSide(width: 0.5, color: Colors.greenAccent),
+                    bottom: BorderSide(width: 0.5, color: Colors.greenAccent),
+                  ),
+                ),
+                child: UserAccountsDrawerHeader(
+                  accountName: Text("Anni Shivakumara"),
+                  accountEmail: Text(""),
+                  currentAccountPicture: CircleAvatar(
+                    backgroundColor: Colors.greenAccent,
+                    child: Text(
+                      "AS",
+                      style: TextStyle(fontSize: 30),
+                      selectionColor: Colors.greenAccent,
+                    ),
+                  ),
+                ),
+              ),
+              ListTile(
+                title: Text('view Profile'),
+                leading: Icon(Icons.person),
+              ),
+              ListTile(
+                title: Text('Edit'),
+                leading: Icon(Icons.edit),
+              ),
+              ListTile(
+                title: Text("Settings"),
+                leading: Icon(Icons.settings),
+                onTap: () {
+                  Navigator.pop(context);
+                },
+              ),
+              ListTile(
+                leading: const Icon(Icons.workspace_premium),
+                title: const Text(' Go Premium '),
+                onTap: () {
+                  Navigator.pop(context);
+                },
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+}
