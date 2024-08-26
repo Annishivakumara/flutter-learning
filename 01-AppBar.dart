@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
-void main() {
+void main() 
+{
   runApp(MaterialApp(
     home: Scaffold(
   
@@ -10,5 +11,6 @@ void main() {
         backgroundColor: Colors.amberAccent,
       ),
     ),
-  ));
+  ),
+        );
 }
