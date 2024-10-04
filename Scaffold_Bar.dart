@@ -1,7 +1,7 @@
-      1. Scaffold class in Flutter 
-      with Examples
+1. Scaffold class in Flutter 
+   with Examples
         
-      Scaffold is a class in flutter which provides many widgets or we can say APIs like
+ Scaffold is a class in flutter which provides many widgets or we can say APIs like
         Drawer, 
         Snack-Bar, 
         bottom-Navigation-Bar,
