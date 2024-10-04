@@ -1,6 +1,3 @@
-Constructor of Container Class
-Syntax: 
-
 Container({Key key,
            AlignmentGeometry alignment, 
            EdgeInsetsGeometry padding, 
@@ -14,7 +11,7 @@ Container({Key key,
            Matrix4 transform, 
            Widget child, 
            Clip clipBehavior: Clip.none});
-
+Above All Are Just simple basic predifined names 
 Properties of Container Class:
 -----------------------------
  1. child:               Container widget has a property ‘child:’ which stores its children. 
